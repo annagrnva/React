@@ -1,25 +1,44 @@
 import { use, useState } from 'react'
 import './App.css'
+import CreateBox from './components/createBox'
 
 export default function App() {
 
-  const [text, setText] = useState()
+  
+  return (
 
-return (
-  <>
-  you enter the text: {text}
+    <>
+      <CreateBox />
+      <CreateBox />
+      <CreateBox />
 
-  <div>
-    <input 
-    type="text" 
-    value={text}
-    onChange={(event) => setText(event.target.value)}
-    />
-  </div>
-  </>
-)
 
-  //Пример с именами
+    </>
+
+  )
+
+}
+
+
+
+
+//   const [text, setText] = useState()
+
+// return (
+//   <>
+//   you enter the text: {text}
+
+//   <div>
+//     <input 
+//     type="text" 
+//     value={text}
+//     onChange={(event) => setText(event.target.value)}
+//     />
+//   </div>
+//   </>
+// )
+
+//Пример с именами
 // const [name, setName] = useState()
 // const [surname, setSurname] = useState()
 
@@ -34,23 +53,23 @@ return (
 //   </>
 // )
 
-  //Пример с цветами
-  // const [color, setColor] = useState('red')
+//Пример с цветами
+// const [color, setColor] = useState('red')
 
-  // return (
-  //   <>
-  //   Color: {color}
-  //   <div 
-  //   className='box'
-  //   style={{
-  //     backgroundColor: color
-  //   }}
-  //   />
+// return (
+//   <>
+//   Color: {color}
+//   <div
+//   className='box'
+//   style={{
+//     backgroundColor: color
+//   }}
+//   />
 
-  //   <button onClick={() => setColor('blue')}>blue</button>
-  //   <button onClick={() => setColor('green')}>green</button>
-  //   <button onClick={() => setColor('yellow')}>yellow</button>
+//   <button onClick={() => setColor('blue')}>blue</button>
+//   <button onClick={() => setColor('green')}>green</button>
+//   <button onClick={() => setColor('yellow')}>yellow</button>
 
-  //   </>
-  // )
-}
+//   </>
+// )
+

@@ -44,5 +44,10 @@
 .box {
   width: 200px;
   height: 200px;
-  background: #3e92cc;
+  border: 3px solid black;
+}
+
+.boxes-wrapper {
+  display: flex;
+
 }
