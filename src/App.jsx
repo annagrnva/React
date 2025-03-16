@@ -1,6 +1,7 @@
 import { use, useState } from 'react'
 import './App.css'
 import CreateBox from './components/createBox'
+import ResetButton from './components/ResetButton'
 
 export default function App() {
 
@@ -12,7 +13,7 @@ export default function App() {
       <CreateBox />
       <CreateBox />
 
-
+      <ResetButton />
     </>
 
   )
