@@ -1,14 +1,16 @@
 import { use, useState } from 'react'
 import '../App.css'
+import CreateBox  from './createBox'
 
-export default function ResetButton() {
+export default function ResetButton({color}) {
+   
 
-    const clickMe = () => {
-        
-        console.log('saf')
+    const resetClick = () => {
+        console.log({color})
+        console.log('click')
     }
     return (
-        <button onClick={() => clickMe('reset')}>Reset</button>
+        <button onClick={() => resetClick('reset')}>Reset</button>
 
     )
 }
