@@ -4,19 +4,30 @@ import CreateBox from './components/createBox'
 import ResetButton from './components/ResetButton'
 
 export default function App() {
-
   const [colors, setColors] = useState('white')
+  const colorChange = ['red', 'blue', 'yellow', 'green']
 
   const resetColors = () => {
-    setColors('white')
+  setColors('white')
   }
+  
+  // const [color, setColor] = useState('white')
+  // const colorChange = ['red', 'blue', 'yellow', 'green']
+
+  const handleClick = () => {
+
+    const currentIndex = colorChange.indexOf(colors)
+    const nextIndex = (currentIndex + 1) 
+
+    setColors(colorChange[nextIndex])
+ };
 
   return (
 
     <>
-      <CreateBox />
-      <CreateBox />
-      <CreateBox />
+      <CreateBox color={colors} handleClick={handleClick}/>
+      <CreateBox color={colors} handleClick={handleClick}/>
+      <CreateBox color={colors} handleClick={handleClick}/>
 
       <ResetButton resetColors={resetColors}/>
     </>
