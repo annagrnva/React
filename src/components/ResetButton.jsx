@@ -2,15 +2,12 @@ import { use, useState } from 'react'
 import '../App.css'
 import CreateBox  from './createBox'
 
-export default function ResetButton(props) {
+
+
+export default function ResetButton({resetColors}) {
    
-
-    const resetClick = () => {
-         console.log(props.color)
-
-    }
     return (
-        <button onClick={() => resetClick('reset')}>Reset</button>
-
+        <button onClick={resetColors}>Reset</button>
+      
     )
 }

@@ -5,7 +5,12 @@ import ResetButton from './components/ResetButton'
 
 export default function App() {
 
-  
+  const [colors, setColors] = useState('white')
+
+  const resetColors = () => {
+    setColors('white')
+  }
+
   return (
 
     <>
@@ -13,7 +18,7 @@ export default function App() {
       <CreateBox />
       <CreateBox />
 
-      <ResetButton />
+      <ResetButton resetColors={resetColors}/>
     </>
 
   )
