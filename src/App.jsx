@@ -15,7 +15,7 @@ export default function App() {
 
     const currentColor = colors[idx]
     const currentIndex = colorChange.indexOf(currentColor)
-    const nextIndex = (currentIndex + 1) 
+    const nextIndex = (currentIndex + 1)
 
     const newBoxColors = [...colors]
     newBoxColors[idx] = colorChange[nextIndex]
@@ -26,15 +26,27 @@ export default function App() {
   return (
 
     <>
-      <CreateBox color={colors[0]} handleClick={() => handleClick(0)} />
-      <CreateBox color={colors[1]} handleClick={() => handleClick(1)} />
-      <CreateBox color={colors[2]} handleClick={() => handleClick(2)} />
+      {colors.map((color, index) => (
+        <CreateBox
+          color={color} key={index} 
+          handleClick={() => handleClick(index)} />
+      ))}
+
+      {/* <CreateBox 
+      color={colors[0]} 
+      handleClick={() => handleClick(0)} />
+
+      <CreateBox 
+      color={colors[1]} 
+      handleClick={() => handleClick(1)} />
+      
+      <CreateBox 
+      color={colors[2]} 
+      handleClick={() => handleClick(2)} /> */}
 
       <ResetButton resetColors={resetColors} />
     </>
-
   )
-
 }
 
 
